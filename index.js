@@ -15,4 +15,15 @@
  * Instructions for this were found on CSS Tricks: 
  * https://css-tricks.com/perfect-full-page-background-image/#awesome-easy-progressive-css3-way)
  */
+let backgroundImageURL = "";
+
+async function getImage() {
+    const response = await fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature");
+    const data = await response.json();
+    console.log(data.links.download);
+    backgroundImageURL = data.links.download;
+    document.body.style.backgroundImage = `url(${backgroundImageURL})`;
+}
+
+getImage();
 
