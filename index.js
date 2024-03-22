@@ -20,9 +20,9 @@ let backgroundImageURL = "";
 async function getImage() {
     const response = await fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature");
     const data = await response.json();
-    console.log(data.links.download);
-    backgroundImageURL = data.links.download;
+    backgroundImageURL = data.urls.full;
     document.body.style.backgroundImage = `url(${backgroundImageURL})`;
+    document.getElementById("author").textContent = `Photo by ${data.user.name}`;
 }
 
 getImage();
