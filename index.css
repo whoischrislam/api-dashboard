@@ -5,9 +5,6 @@
 body {
     margin: 0;
     background: no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -27,6 +24,22 @@ div.top {
     justify-content: space-between;
 }
 
-h1.time {
+#time {
     text-align: center;
+}
+
+#crypto {
+    display: flex;
+    flex-direction: column;
+}
+
+#crypto p {
+    margin: 0.1rem 0;
+}
+
+#cryptoLogo {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
 }
